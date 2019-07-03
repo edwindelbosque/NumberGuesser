@@ -183,4 +183,7 @@ article {
 	height: 22px;
 	margin-right: 6px;
 	width: 22px;
+	text-align: center;
+	color: darkgray;
+	font-weight: 700;
 }
