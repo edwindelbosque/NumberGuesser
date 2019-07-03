@@ -45,6 +45,19 @@ header > p {
 	margin-top: -25px;
 }
 
+header span {
+	position: relative;
+	bottom: 8px;
+}
+
+.line-left {
+	right: 10px;
+}
+
+.line-right {
+	left: 10px;
+}
+
 /* This is the main area, these settings tell section right & left to center */
 main {
 	display: flex;
