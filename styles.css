@@ -26,24 +26,26 @@ header {
 	justify-content: center;
 	line-height: 350%;
 	margin: 0 auto;
-	text-align: center;
-	/*width: 959px;*/
 }
 
 header > h1 {
 	color: #DD1972;
-	font-size: 60px;
+	font-size: 55px;
 	font-weight: 300;
 	margin: 0;
     text-align: center;
+   /* margin-top: 13px;*/
+    line-height: 75px;
 }
 
 header > p {
 	color: white;
-	font-size: 20px;
+	font-size: 19px;
 	font-weight: 300;
 	margin: 0;
     text-align: center;
+    line-height: 100%;
+
 	/*margin-top: -25px;*/
 }
 
@@ -89,7 +91,7 @@ article {
 .article-left {
 	border-radius: 1px;
 	border: solid 2px #D0D2D3;
-	height: 120px;
+	height: 130px;
 	width: 90%;
 }
 
@@ -182,22 +184,10 @@ article {
 @media screen and (max-width:959px) {
 	header {
 		width: 100%;
-		/*margin: 10px;*/
-		/*max-width: 959px;
-		min-width: 850px;*/
 	}
 	header h1 {
-		/*font-size: 45px;*/
-		/*width: 80%;*/
-		margin-top: 158px;
-    	text-align: center;
 	}
 	header p {
-		/*width: 40%;*/
-		color: white;
-		font-weight: 300;
-		/*margin: 0;*/
-    	text-align: center;
 	}	
 	.section-left {
 		width: 50%;
@@ -218,10 +208,10 @@ article {
 		width: 50%;
 	}
 	.article-right h3 {
-		width: 75%;
+		/*width: 75%;*/
 	}
 	.article-right h4 {
-		width: 70%;
+		/*width: 70%;*/
 	}
 	.article-right article {
 		width: 75%;
@@ -256,12 +246,11 @@ article {
 	}
 
 	header h1 {
-		font-size: 35pt;
-    	margin-top: 158px;
-    	text-align: center;
+		font-size: 40pt;
 	}
 
 	header p {
+		font-size: 13pt;
 	}
 	
 }
