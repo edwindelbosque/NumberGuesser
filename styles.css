@@ -208,7 +208,7 @@ article {
 		width: 50%;
 	}
 	.article-right h3 {
-		/*width: 75%;*/
+		font-size: 176%;
 	}
 	.article-right h4 {
 		/*width: 70%;*/
@@ -250,7 +250,7 @@ article {
 	}
 
 	header p {
-		font-size: 13pt;
+		font-size: 14pt;
 	}
 	
 }
