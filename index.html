@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
       <title>Number Guesser Double</title>
       <link rel="stylesheet" href="styles.css"/>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8"> 
   </head>
   <body>
   	<header>
@@ -15,11 +15,17 @@
   	<main>
 	  	<section class="section-left">
 	  		<article id="set-range" class="article-left">
+	  			<div class="form"> 
+   				<label for="guessField">Enter a guess: </label> 
+    			<input type = "text" id = "guessField" class = "guessField"> 
+    			<input type = "submit" value = "Submit guess" 
+          		 class = "guessSubmit" id = "submitguess"> 
 	  		</article>
 	  		<article id="current-range" class="article-left">
 	  		</article>
 	  		<article id="latest-score" class="article-left">
 	  		</article>
+</div>
 	  	</section>
 	  	<section class="section-right">	
 	  		<article id="results" class="article-right">
@@ -46,5 +52,7 @@
 	  		</article>
   		</section>
   	</main>
+  	<script src="main.js">
+    </script>
   </body>
 </html>
