@@ -1,5 +1,5 @@
 /** {
-	border: 1px solid red;
+	border: 1px solid green;
 }*/
 
 /* This is setting up the website's general settings */
@@ -17,7 +17,7 @@ body {
 }
 
 /* This is the header */
-header {
+.main-header {
 	background-color: #404041;
 	display: flex;
 	flex-direction: column;
@@ -38,11 +38,39 @@ header > h1 {
 	padding: 20px;
 }
 
-header > p {
+h2 { 
 	color: white;
 	font-size: 20px;
 	font-weight: 300;
 	margin-top: -25px;
+}
+
+h2 span {
+	position: relative;
+	bottom: 8px;
+}
+
+h5{
+	color: gray;
+	font-size: 18px;
+	font-weight: 700;
+	height: 25px;
+
+}
+
+p {
+	color: gray;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+form {
+	color: gray;
+	font-size: 17px;
+}
+
+#set-range input {
+	width: 130%;
 }
 
 /* This is the main area, these settings tell section right & left to center */
@@ -58,7 +86,7 @@ main {
 	border-right: solid 1px #6E6E6E;
 	display: flex;
 	flex-direction: column;
-	height: 900px;
+	height: 710px;
 	max-width: 550px;
 	width: 50%;
 }
@@ -70,9 +98,105 @@ main {
 	border-right: solid 2px #6E6E6E;
 	display: flex;
 	flex-direction: column;
-	height: 900px;
+	height: 710px;
 	max-width: 550px;
 	width: 50%;
+}
+
+/* Set-range article box */
+#set-range {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 120px;
+}
+
+#set-range header {
+	height: 40px;
+	width: 95%;
+	justify-content: flex-start;
+	display: flex;
+	color: black;
+	align-items: center;
+}
+
+#set-range section {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	height: 80px;
+	width: 95%;
+}
+
+#set-range form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	height: 60px;
+	align-items: flex-end;
+}
+
+/* Current Range section */
+#current-range {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 330px;
+}
+
+#current-range p,
+#current-range h5,
+#current-range form,
+#current-range section {
+	width: 95%;
+	margin-top: 12px;
+}
+
+#current-range h5 {
+}
+
+#current-range form {
+	display: flex;
+	flex-direction: row;
+}
+
+#latest-score {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 200px;
+}
+
+#current-range section {
+	display: flex;
+	justify-content: space-between;
+}
+
+#current-range button {
+	background-color: gray;
+	height: 35px;
+	width: 32%;
+	color: white;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 20px
+}
+
+.submit-button {
+	background-color: gray;
+	height: 35px;
+	width: 110px;
+	color: white;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 20px
+}
+
+input {
+	height: 35px;
+	border: solid 2px lightgray;
+	border-radius: 2px;
 }
 
 /* These are general settings for all of the article cards on the right & left side */
@@ -84,7 +208,6 @@ article {
 .article-left {
 	border-radius: 1px;
 	border: solid 2px #D0D2D3;
-	height: 120px;
 	width: 93%;
 }
 
@@ -102,11 +225,10 @@ article {
 .article-right header {
 	align-items: center;
 	background-color: white;
-	border-bottom: solid 2px #D0D2D3;
 	display: flex;
 	flex-direction: row;
 	height: 40px;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	width: 95%;
 }
 
@@ -124,11 +246,13 @@ article {
 	justify-content: center;
 	margin: 0;
 	width: 95%;
+	border-bottom: solid 2px #D0D2D3;
+	border-top: solid 2px #D0D2D3;
 }
 
 .article-right h3 {
 	color: gray;
-	font-size: 33px;
+	font-size: 31px;
 	margin: 0;
 }
 
@@ -141,13 +265,12 @@ article {
 
 .article-right footer {
 	align-items: center;
-	border-top: solid 2px #D0D2D3;
 	display: flex;
 	flex-direction: row;
 	height: 40px;
 	justify-content: space-between;
 	margin: 0;
-	width: 95%;
+	width: 90%;
 }
 
 .minute-count {
@@ -163,11 +286,7 @@ article {
 	margin-right: 10px;
 }
 
-.cross-icon {
-	background-color: gray;
+.x-icon {
 	border-radius: 100%;
-	color: white;
 	height: 22px;
-	margin-right: 6px;
-	width: 22px;
 }
