@@ -32,10 +32,8 @@ header h1 {
 	color: #DD1972;
 	font-size: 7vw;
 	font-weight: 300;
-	margin: 0;
+	margin: .25em;
     text-align: center;
-   /* margin-top: 13px;*/
-    line-height: 75px;
 }
 
 header p {
@@ -45,8 +43,6 @@ header p {
 	margin: 0;
     text-align: center;
     line-height: 100%;
-
-	/*margin-top: -25px;*/
 }
 
 /* This is the main area, these settings tell section right & left to center */
@@ -198,7 +194,7 @@ article {
 		width: 100%;
 	}
 	header h1 {
-		font-size: 7vw;
+		/*font-size: 7vw;*/
 	}
 	header p {
 		font-size: 2vw;
@@ -269,6 +265,7 @@ article {
 
 	header h1 {
 		font-size: 8vw;
+		/*line-height: 48%;*/
 		/*font-size: 40pt;*/
 	}
 
