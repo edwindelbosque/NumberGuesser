@@ -27,7 +27,7 @@ header {
 	line-height: 350%;
 	margin: 0 auto;
 	text-align: center;
-	width: 100%;
+	/*width: 959px;*/
 }
 
 header > h1 {
@@ -35,14 +35,14 @@ header > h1 {
 	font-size: 60px;
 	font-weight: 300;
 	margin: 0;
-	padding: 20px;
+	padding: 20%;
 }
 
 header > p {
 	color: white;
 	font-size: 20px;
 	font-weight: 300;
-	margin-top: -25px;
+	/*margin-top: -25px;*/
 }
 
 /* This is the main area, these settings tell section right & left to center */
@@ -59,8 +59,12 @@ main {
 	display: flex;
 	flex-direction: column;
 	height: 900px;
-	max-width: 550px;
 	width: 50%;
+}
+
+.section-left:after {
+	display: block;
+	width: 100%;
 }
 
 .section-right {
@@ -71,7 +75,6 @@ main {
 	display: flex;
 	flex-direction: column;
 	height: 900px;
-	max-width: 550px;
 	width: 50%;
 }
 
@@ -85,7 +88,7 @@ article {
 	border-radius: 1px;
 	border: solid 2px #D0D2D3;
 	height: 120px;
-	width: 93%;
+	width: 45%;
 }
 
 .article-right {
@@ -96,6 +99,7 @@ article {
 	flex-direction: column;
 	height: 190px;
 	width: 85%;
+	width: 45%;
 }
 
 /* Here are the settings for the card that will appear on the right side and will replicate with every score (divided into: header, article, & footer) */
@@ -107,7 +111,7 @@ article {
 	flex-direction: row;
 	height: 40px;
 	justify-content: space-around;
-	width: 95%;
+	/*width: 450px;*/
 }
 
 .article-right header p {
@@ -123,7 +127,7 @@ article {
 	height: 110px;
 	justify-content: center;
 	margin: 0;
-	width: 95%;
+	/*width: 450px;*/
 }
 
 .article-right h3 {
@@ -147,7 +151,7 @@ article {
 	height: 40px;
 	justify-content: space-between;
 	margin: 0;
-	width: 95%;
+	/*width: 450px;*/
 }
 
 .minute-count {
@@ -170,4 +174,108 @@ article {
 	height: 22px;
 	margin-right: 6px;
 	width: 22px;
+}
+
+/*Media Query section*/
+
+@media screen and (max-width:959px) {
+	header {
+		width: 100%;
+		/*margin: 10px;*/
+		/*max-width: 959px;
+		min-width: 850px;*/
+	}
+	header > h1 {
+		font-size: 60px;
+		width: 100%;
+		max-width: 959px;
+		min-width: 850px;
+	}
+	header > p {
+		width: 100px;
+		/*max-width: 800px;
+		min-width: 750px;*/
+	}	
+	.section-left {
+		width: 50%;
+		/*width: 480px;*/
+		/*max-width: 480px;
+		min-width: 430px;*/
+	}
+	.section-right {
+		width: 50%;
+		/*width: 480px;*/
+		/*max-width: 480px;
+		min-width: 430px;*/
+	}
+	.article-left {
+		width: 45%;
+		/*max-width: 450px;
+		min-width: 430px;*/
+	}
+	.article-right {
+		width: 45%;
+		/*max-width: 450px;
+		min-width: 430px;*/
+	}
+	.article-right header {
+		width: 45%;
+		/*max-width: 450px;
+		min-width: 430px;*/
+	}
+	.article-right footer {
+		width: 50%;
+		/*max-width: 480px;
+		min-width: 450px;*/
+	}
+	.article-right h3 {
+		width: 45%;
+		/*max-width: 450px;
+		min-width: 430px;*/
+	}
+	.article-right h4 {
+		width: 45%;
+		/*max-width: 450px;
+		min-width: 430px;*/
+	}
+	.article-right article {
+		width: 48%;
+		/*max-width: 465px;
+		min-width: 455px;*/
+	}
+}
+
+@media screen and (max-width:640px) {
+
+	main {
+
+		flex-direction: column;
+	}
+
+	header {
+		width: 100%;
+		/*margin: 10px;*/
+		/*max-width: 959px;
+		min-width: 850px;*/
+	}
+
+	.section-left {
+		width: 100%;
+		/*min-width: 600px;*/
+		/*display: block;*/
+		/*max-width: 640px;
+		min-width: 500px;*/
+	}
+	.section-right {
+		width: 100%;
+		/*min-width: 600px;*/
+		/*display: block;*/
+		/*width: 480px;*/
+		/*max-width: 640px;
+		min-width: 500px;*/
+	}	
+	header h1 {
+		font-size: 50px;
+	}
+	
 }
