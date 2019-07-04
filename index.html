@@ -7,15 +7,59 @@
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
   </head>
   <body>
-  	<header>
+  	<header class="main-header">
   		<h1><strong>NUMBER</strong>GUESSER</h1>
-  		<p>ULTIMATE CHALLENGER EDITION</p>
+  		<h2><span>____________</span> ULTIMATE CHALLENGER EDITION <span>____________</span></h2>
   	</header>
   	<main>
 	  	<section class="section-left">
 	  		<article id="set-range" class="article-left">
+	  			<header>
+	  				<h5>Set Range</h5>
+	  			</header>
+	  			<section>
+	  				<form>
+	  					<div>
+	  						Min Range <br/>
+	  						<input type="text">
+	  					</div>
+	  					<div>
+	  						Max Range <br/>
+	  						<input type="text">
+	  					</div>
+	  						<button type="button" class="submit-button">UPDATE</button>
+	  				</form>
+	  			</section>
 	  		</article>
 	  		<article id="current-range" class="article-left">
+	  			<p>The Current Range is <strong>1</strong> to <strong>100</strong></p>
+	  			<h5>Challenger 1</h5>
+	 				<form>
+	 					<div>
+	 						Name<br/>
+  						<input type="text">
+	 					</div>
+	 					<div>
+	  					Guess<br/>
+	  					<input type="text">
+	  				</div>
+	  			</form>
+	  			<h5>Challenger 2</h5>
+  				<form>
+	 					<div>
+	 						Name<br/>
+	  					<input type="text">
+	  				</div>
+	  				<div>
+	  					Guess<br/>
+	  					<input type="text">
+	  				</div>
+	  			</form>
+	  			<section>
+	  				<button type="button">SUBMIT GUESS</button>
+	  				<button type="button">RESET GAME</button>
+	  				<button type="button">CLEAR GAME</button>
+	  			</section>
 	  		</article>
 	  		<article id="latest-score" class="article-left">
 	  		</article>
@@ -40,7 +84,7 @@
 			  			<p><strong>1.35</strong></p>
 			  			<p>MINUTES</p>
 		  			</div>
-		  			<p class="cross-icon">x</p>
+		  			<img class="x-icon" src="images/x-button.png"/>
 		  		</footer>
 	  		</article>
   		</section>
