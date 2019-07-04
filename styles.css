@@ -35,13 +35,15 @@ header > h1 {
 	font-size: 60px;
 	font-weight: 300;
 	margin: 0;
-	padding: 20%;
+    text-align: center;
 }
 
 header > p {
 	color: white;
 	font-size: 20px;
 	font-weight: 300;
+	margin: 0;
+    text-align: center;
 	/*margin-top: -25px;*/
 }
 
@@ -58,7 +60,7 @@ main {
 	border-right: solid 1px #6E6E6E;
 	display: flex;
 	flex-direction: column;
-	height: 625px;
+	height: 675px;
 	width: 50%;
 }
 
@@ -74,7 +76,7 @@ main {
 	border-right: solid 2px #6E6E6E;
 	display: flex;
 	flex-direction: column;
-	height: 625px;
+	height: 675px;
 	width: 50%;
 }
 
@@ -88,7 +90,7 @@ article {
 	border-radius: 1px;
 	border: solid 2px #D0D2D3;
 	height: 120px;
-	width: 45%;
+	width: 90%;
 }
 
 .article-right {
@@ -99,7 +101,6 @@ article {
 	flex-direction: column;
 	height: 190px;
 	width: 85%;
-	width: 45%;
 }
 
 /* Here are the settings for the card that will appear on the right side and will replicate with every score (divided into: header, article, & footer) */
@@ -185,12 +186,18 @@ article {
 		/*max-width: 959px;
 		min-width: 850px;*/
 	}
-	header > h1 {
+	header h1 {
 		/*font-size: 45px;*/
-		width: 80%;
+		/*width: 80%;*/
+		margin-top: 158px;
+    	text-align: center;
 	}
-	header > p {
-		width: 22px;
+	header p {
+		/*width: 40%;*/
+		color: white;
+		font-weight: 300;
+		/*margin: 0;*/
+    	text-align: center;
 	}	
 	.section-left {
 		width: 50%;
@@ -199,13 +206,13 @@ article {
 		width: 50%;
 	}
 	.article-left {
-		width: 75%;
+		width: 90%;
 	}
 	.article-right {
-		width: 75%;
+		width: 90%;
 	}
 	.article-right header {
-		width: 75%;
+		width: 91%;
 	}
 	.article-right footer {
 		width: 50%;
@@ -235,15 +242,26 @@ article {
 	.section-left {
 		width: 100%;
 	}
+
+	.article-left {
+		width: 90%;
+	}
+
 	.section-right {
 		width: 100%;
 	}	
+
+	.article-right {
+		width: 90%;
+	}
+
 	header h1 {
 		font-size: 35pt;
     	margin-top: 158px;
     	text-align: center;
 	}
-	header > p {
+
+	header p {
 	}
 	
 }
