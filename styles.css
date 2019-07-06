@@ -175,7 +175,7 @@ main {
 	border-radius: 20px
 }
 
-.submit-button {
+#submit-button {
 	background-color: gray;
 	height: 35px;
 	width: 110px;
