@@ -1,3 +1,4 @@
+// variables for "set range" section and number randomizer
 var minRange = document.getElementById("minRange");
 var maxRange = document.getElementById("maxRange");
 var rangeButton = document.querySelector('.updateRange');
@@ -5,7 +6,6 @@ var minUser = document.querySelector('.minUser');
 var maxUser = document.querySelector('.maxUser');
 
 // create random number from the users min and max range
-
 rangeButton.addEventListener('click', updateRangeValue);
 
 function updateRangeValue(event){
@@ -14,10 +14,9 @@ minUser.innerText = minRange.value;
 maxUser.innerText = maxRange.value;
 }
 
-// This variables and function is to be able to change the challenger names to what the user inputs
-//-----------------it only works on th code above is commented out
+// Change the challenger names and guess numbers to what the user inputs
 
-// ------------ Variables
+// variables
 var inputNameOne = document.querySelector("#input-name-one");
 var inputNameTwo = document.querySelector("#input-name-two");
 var inputGuessOne = document.querySelector("#input-guess-one");
@@ -28,10 +27,10 @@ var guessDisplayTwo = document.querySelector("#guess-display-two")
 var playerNameOne = document.querySelector(".player-name-one");
 var playerNameTwo = document.querySelector(".player-name-two");
 
-// --------------Event listeners
+// event listener
 submitGuessButton.addEventListener("click", displayInformation);
 
-//  -------------Functions
+// function
 function displayInformation() {
  playerNameTwo.innerHTML = inputNameTwo.value;
  playerNameOne.innerHTML = inputNameOne.value;
