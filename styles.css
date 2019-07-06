@@ -28,7 +28,7 @@ body {
 	margin: 0 auto;
 }
 
-header h1 {
+h1 {
   color: #DD1972;
 	font-size: 7vw;
 	font-weight: 300;
@@ -158,13 +158,6 @@ main {
 #current-range form {
 	display: flex;
 	flex-direction: row;
-}
-
-#latest-score {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 200px;
 }
 
 #current-range section {
@@ -387,4 +380,53 @@ article {
 		font-size: 3vw;
 	}
 	
+}
+
+
+
+
+
+
+/* Latest-score card*/
+
+#latest-score * {
+	margin: 0;
+	padding: 0;
+}
+
+#latest-score {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 200px;
+}
+
+.score-header {
+	display: flex;
+	justify-content: flex-start;
+	width: 95%;
+	height: 50px;
+}
+
+.main-score {
+	display: flex;
+	flex-direction: row;
+	width: 95%;
+	height: 150px
+}
+
+.main-score article {
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-score-left {
+	border-right: solid 1px lightgray;
+}
+
+.main-score-right {
+	border-left: solid 1px lightgray;
 }
