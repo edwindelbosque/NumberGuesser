@@ -43,7 +43,7 @@
 	 					</div>
 	 					<div>
 	  					Guess<br/>
-	  					<input type = "text" id="guessField" class="guessField"> 
+	  					<input type = "text" id="input-guess-one"> 
 	  				</div>
 	  			</form>
 	  			<h5>Challenger 2</h5>
@@ -54,12 +54,12 @@
 	  				</div>
 	  				<div>
 	  					Guess<br/>
-	  					<input type="text">
+	  					<input type="text" id="input-guess-two">
 	  				</div>
 	  			</form>
 	  			<section>
-            <input type = "submit" value = "Submit guess" class = "guessSubmit" id = "submitguess">
-	  				<buttom type = "submit" value = "Submit guess" class = "guessSubmit" id = "submitguess">
+            <input type = "submit" value = "Submit guess" class = "guessSubmit" id = "submit-guess">
+	  				<buttom type = "submit" value = "Submit guess" class = "guessSubmit" id="submit-guess-button">
 	  				SUBMIT GUESS</button>
 	  				<button type="button">RESET GAME</button>
 	  				<button type="button">CLEAR GAME</button>
@@ -70,15 +70,15 @@
 	  			</section>
 	  			<section class="main-score">
 	  				<article class="main-score-left">
-	  					<p><strong>Challenger 1 Name</strong></p>
+	  					<p><strong class="player-name-one">Challenger 1 Name</strong></p>
 	  					<p>current guess</p>
-	  					<h1><strong>97</strong></h1>
+	  					<h1><strong id="guess-display-one">97</strong></h1>
 	  					<p>that's too high</p>
 	  				</article>
 	  				<article class="main-score-right">
-	  					<p><strong>Challenger 2 Name</strong></p>
+	  					<p><strong class="player-name-two">Challenger 2 Name</strong></p>
 	  					<p>current guess</p>
-	  					<h1><strong>3</strong></h1>
+	  					<h1><strong id="guess-display-two">3</strong></h1>
 	  					<p>that's too low</p>
 	  				</article>
 	  			</section>
