@@ -1,34 +1,18 @@
-var numbers = [from 1, to 100];
+var minRange = document.getElementById("minRange");
+var maxRange = document.getElementById("maxRange");
+var rangeButton = document.querySelector('.updateRange');
+var minUser = document.querySelector('.minUser');
+var maxUser = document.querySelector('.maxUser');
 
-    // random value generated 
-    var y = Math.floor(Math.random() * 10 + 1); 
-      
-    // counting the number of guesses 
-    // made for correct Guess 
-    var guess = 1; 
-      
-    document.getElementById("submitguess").onclick = function(){ 
-      
-    // number guessed by user      
-    var x = document.getElementById("guessField").value; 
-  
-   if(x == y) 
-   {     
-       console.log(winningPlayer)
-               + guess + " GUESS "; 
-   } 
-   else if(x > y) /* if guessed number is greater 
-                   than actual number*/ 
-   {     
-       guess++; 
-       alert("OOPS SORRY!! TRY A SMALLER NUMBER"); 
-   } 
-   else
-   { 
-       guess++; 
-       alert("OOPS SORRY!! TRY A GREATER NUMBER")
-   } 
-};
+// create random number from the users min and max range
+
+rangeButton.addEventListener('click', updateRangeValue);
+
+function updateRangeValue(event){
+event.preventDefault();
+minUser.innerText = minRange.value;
+maxUser.innerText = maxRange.value;
+}
 
 // This variables and function is to be able to change the challenger names to what the user inputs
 //-----------------it only works on th code above is commented out

@@ -9,31 +9,32 @@
   </head>
   <body>
   	<header class="main-header">
-  		<h1><strong>NUMBER</strong>GUESSER</h1>
-  		<h2><span id="font-deck">____________</span> ULTIMATE CHALLENGER EDITION <span id="font-deck">____________</span></h2>
+  	  <h1><strong>NUMBER</strong>GUESSER</h1>
+  	  <h2><span id="font-deck">____________</span> ULTIMATE CHALLENGER EDITION <span id="font-deck">____________</span></h2>
   	</header>
   	<main>
-	  	<section class="section-left">
-	  		<article id="set-range" class="article-left">
-	  			<header>
-	  				<h5>Set Range</h5>
-	  			</header>
-	  			<section>
-	  				<form>
-	  					<div>
-	  						Min Range <br/>
-	  						<input type="text">
-	  					</div>
-	  					<div>
-	  						Max Range <br/>
-	  						<input type="text">
-	  					</div>
-	  						<button type="button" class="submit-button">UPDATE</button>
-	  				</form>
+	  <section class="section-left">
+	    <article id="set-range" class="article-left">
+	  	  <header>
+	  		<h5>Set Range</h5>
+	  	  </header>
+	  		<section>
+	  		  <form>
+	  			<div>
+	  			  <p>Min Range</p> <br/>
+	  			  <input type = "text" id="minRange">
+	  			</div>
+	  			<div>
+	  			  <p>Max Range</p> <br/>
+	  			  <input type = "text" id="maxRange">
+	  			</div>
+	  			<button type="submit" value="Update" class="updateRange">UPDATE
+	  			</button>
+	  		  </form>
 	  			</section>
 	  		</article>
 	  		<article id="current-range" class="article-left">
-	  			<p>The Current Range is <strong>1</strong> to <strong>100</strong></p>
+	  			<p>The Current Range is <strong class="minUser">1</strong> to <strong class="maxUser">100</strong></p>
 	  			<h5>Challenger 1</h5>
 	 				<form>
 	 					<div>
@@ -42,7 +43,7 @@
 	 					</div>
 	 					<div>
 	  					Guess<br/>
-	  					<input type="text">
+	  					<input type = "text" id="guessField" class="guessField"> 
 	  				</div>
 	  			</form>
 	  			<h5>Challenger 2</h5>
@@ -57,7 +58,9 @@
 	  				</div>
 	  			</form>
 	  			<section>
-	  				<button type="button" id="submit-guess-button">SUBMIT GUESS</button>
+            <input type = "submit" value = "Submit guess" class = "guessSubmit" id = "submitguess">
+	  				<buttom type = "submit" value = "Submit guess" class = "guessSubmit" id = "submitguess">
+	  				SUBMIT GUESS</button>
 	  				<button type="button">RESET GAME</button>
 	  				<button type="button">CLEAR GAME</button>
 	  			</section>
