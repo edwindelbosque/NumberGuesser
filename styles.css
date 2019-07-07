@@ -175,7 +175,7 @@ main {
 	border-radius: 20px
 }
 
-#submit-button {
+.updateRange {
 	background-color: gray;
 	height: 35px;
 	width: 110px;
@@ -429,4 +429,11 @@ article {
 
 .main-score-right {
 	border-left: solid 1px lightgray;
+}
+
+button:hover,
+#submit-guess-button:hover,
+#reset-button:hover,
+#clear-button:hover {
+	background-color: #DD1972;
 }

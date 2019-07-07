@@ -28,7 +28,7 @@
 	  			  <p>Max Range</p> <br/>
 	  			  <input type = "text" id="maxRange">
 	  			</div>
-	  			<button type="submit" class="updateRange" id="submit-button">UPDATE
+	  			<button class="updateRange">UPDATE
 	  			</button>
 	  		  </form>
 	  			</section>
@@ -58,10 +58,10 @@
 	  				</div>
 	  			</form>
 	  			<section>
-	  				<button type="submit" value="Submit guess" class = "guessSubmit" id="submit-guess-button">
+	  				<button class="guessSubmit" id="submit-guess-button">
 	  				SUBMIT GUESS</button>
-	  				<button type="button">RESET GAME</button>
-	  				<button type="button">CLEAR GAME</button>
+	  				<button id="reset-button">RESET GAME</button>
+	  				<button id="clear-button">CLEAR GAME</button>
 	  			</section>
 	  		</article>
 	  		<article id="latest-score" class="article-left">
@@ -72,13 +72,13 @@
 	  					<p><strong class="player-name-one">Challenger 1 Name</strong></p>
 	  					<p>current guess</p>
 	  					<h1><strong id="guess-display-one">97</strong></h1>
-	  					<p>that's too high</p>
+	  					<p id="guess-message-one">that's too high</p>
 	  				</article>
 	  				<article class="main-score-right">
 	  					<p><strong class="player-name-two">Challenger 2 Name</strong></p>
 	  					<p>current guess</p>
 	  					<h1><strong id="guess-display-two">3</strong></h1>
-	  					<p>that's too low</p>
+	  					<p id="guess-message-two">that's too low</p>
 	  				</article>
 	  			</section>
 	  		</article>
