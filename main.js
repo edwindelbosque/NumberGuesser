@@ -21,6 +21,7 @@ var attemptUserTwo = 1;
 var tooLow = "that's too low"
 var tooHigh = "that's too high"
 var correctGuess = "BOOM! "
+var scoreHistory = document.querySelector(".section-right");
 
 // --event listeners
 submitGuessButton.addEventListener("click", displayInformation);
@@ -56,6 +57,7 @@ submitGuessButton.addEventListener('click', function() {
 if (inputGuessOne.value == randomNumber) {	 
 guessMessageOne.innerHTML = correctGuess
 			+ attemptUserOne + " Attemps ";
+			scoreHistory.innerHTML += scoreHistoryContent;
 } 
 else if(inputGuessOne.value > randomNumber)
 {
@@ -73,6 +75,7 @@ submitGuessButton.addEventListener('click', function() {
 if (inputGuessTwo.value == randomNumber) {	 
 guessMessageTwo.innerHTML = correctGuess
 			+ attemptUserTwo + " Attemps ";
+			scoreHistory.innerHTML += scoreHistoryContent2;
 } 
 else if(inputGuessTwo.value > randomNumber)
 {
@@ -84,3 +87,50 @@ else
 	attemptUserTwo++; 
 	guessMessageTwo.innerHTML = tooLow;
 }});
+
+
+// scoreHistory.innerHTML += scoreHistoryContent;
+
+var scoreHistoryContent = `<article id="results" class="article-right">
+	  			<header>
+		  			<p><strong id="player-name-one">${inputNameOne.value}</strong></p>
+		  			<p>VS</p>
+		  			<p><strong id="player-name-two">${playerNameTwo}</strong></p>
+		  		</header>
+		  		<article>
+		  			<h3>${playerNameOne}</h3>
+		  			<h4>WINNER</h4>
+		  		</article>
+		  		<footer>
+		  			<div class="guess-count">
+			  			<p><strong>${attemptUserOne}</strong></p>
+			  			<p>GUESSES</p>
+		  			</div>
+		  			<div class="minute-count">
+			  			<p><strong>1.35</strong></p>
+			  			<p>MINUTES</p>
+		  			</div>
+		  			<img class="x-icon" src="images/x-button.png"/>
+		  		</footer></article>`
+
+var scoreHistoryContent2 = `<article id="results" class="article-right">
+	  			<header>
+		  			<p><strong id="player-name-one">${inputNameOne.value}</strong></p>
+		  			<p>VS</p>
+		  			<p><strong id="player-name-two">${playerNameTwo}</strong></p>
+		  		</header>
+		  		<article>
+		  			<h3>${playerNameTwo}</h3>
+		  			<h4>WINNER</h4>
+		  		</article>
+		  		<footer>
+		  			<div class="guess-count">
+			  			<p><strong>${attemptUserTwo}</strong></p>
+			  			<p>GUESSES</p>
+		  			</div>
+		  			<div class="minute-count">
+			  			<p><strong>1.35</strong></p>
+			  			<p>MINUTES</p>
+		  			</div>
+		  			<img class="x-icon" src="images/x-button.png"/>
+		  		</footer></article>`
