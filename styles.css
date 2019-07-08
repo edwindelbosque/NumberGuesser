@@ -30,19 +30,18 @@ body {
 
 h1 {
   color: #DD1972;
-	font-size: 7vw;
+	font-size: 5vw;
 	font-weight: 300;
-	margin: .25em;
-  text-align: center;
+    text-align: center;
 }
 
 h2 { 
 	color: white;
-	font-size: 2vw;
+	font-size: 18px;;
 	font-weight: 300;
 	margin: 0;
-  text-align: center;
-  line-height: 100%;
+    text-align: center;
+    line-height: 135%;
 }
 
 #font-deck {
@@ -52,15 +51,16 @@ h2 {
 
 h5{
 	color: gray;
-	font-size: 2vw;
+	font-size: 21px;
 	font-weight: 700;
 	height: 25px;
+	margin-top: -10px;
 
 }
 
 p {
 	color: gray;
-	font-size: 2vw;
+	font-size: 16px;
 	font-weight: 300;
 }
 
@@ -86,8 +86,7 @@ main {
 	border-right: solid 1px #6E6E6E;
 	display: flex;
 	flex-direction: column;
-	height: 675px;
-	max-width: 550px;
+	height: 750px;
 	width: 50%;
 }
 
@@ -98,7 +97,7 @@ main {
 	border-right: solid 2px #6E6E6E;
 	display: flex;
 	flex-direction: column;
-	height: 675px;
+	height: 750px;
 	width: 50%;
 }
 
@@ -107,7 +106,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 120px;
+	height: 180px;
 }
 
 #set-range header {
@@ -125,6 +124,7 @@ main {
 	flex-direction: row;
 	height: 80px;
 	width: 95%;
+	margin-top: 30px;
 }
 
 #set-range form {
@@ -141,7 +141,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 330px;
+	height: 380px
 }
 
 #current-range p,
@@ -172,7 +172,8 @@ main {
 	color: white;
 	font-size: 16px;
 	font-weight: 700;
-	border-radius: 20px
+	border-radius: 20px;
+	margin: 7px;
 }
 
 .updateRange {
@@ -294,6 +295,57 @@ article {
 	height: 22px;
 }
 
+/* Latest-score card*/
+
+#latest-score * {
+	margin: 0;
+	padding: 0;
+}
+
+#latest-score {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 350px;
+}
+
+.score-header {
+	display: flex;
+	justify-content: flex-start;
+	width: 95%;
+	height: 50px;
+}
+
+.main-score {
+	display: flex;
+	flex-direction: row;
+	width: 95%;
+	height: 150px
+}
+
+.main-score article {
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-score-left {
+	border-right: solid 1px lightgray;
+}
+
+.main-score-right {
+	border-left: solid 1px lightgray;
+}
+
+button:hover,
+#submit-guess-button:hover,
+#reset-button:hover,
+#clear-button:hover {
+	background-color: #DD1972;
+}
+
 /*Media Query section*/
 
 @media screen and (max-width:959px) {
@@ -371,7 +423,7 @@ article {
 }
 
 	header h1 {
-		font-size: 8vw;
+		font-size: 7vw;
 		/*line-height: 48%;*/
 		/*font-size: 40pt;*/
 	}
@@ -380,60 +432,4 @@ article {
 		font-size: 3vw;
 	}
 	
-}
-
-
-
-
-
-
-/* Latest-score card*/
-
-#latest-score * {
-	margin: 0;
-	padding: 0;
-}
-
-#latest-score {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 200px;
-}
-
-.score-header {
-	display: flex;
-	justify-content: flex-start;
-	width: 95%;
-	height: 50px;
-}
-
-.main-score {
-	display: flex;
-	flex-direction: row;
-	width: 95%;
-	height: 150px
-}
-
-.main-score article {
-	display: flex;
-	width: 50%;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.main-score-left {
-	border-right: solid 1px lightgray;
-}
-
-.main-score-right {
-	border-left: solid 1px lightgray;
-}
-
-button:hover,
-#submit-guess-button:hover,
-#reset-button:hover,
-#clear-button:hover {
-	background-color: #DD1972;
 }
