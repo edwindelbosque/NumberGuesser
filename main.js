@@ -18,13 +18,27 @@ var guessMessageTwo = document.querySelector("#guess-message-two");
 var randomNumber = Math.floor(Math.random() * (maxRange - minRange) + minRange);
 var attemptUserOne = 1;
 var attemptUserTwo = 1;
-var tooLow = "that's too low"
-var tooHigh = "that's too high"
-var correctGuess = "BOOM! "
+var tooLow = "that's too low";
+var tooHigh = "that's too high";
+var correctGuess = "BOOM! ";
+var clearButton = document.querySelector("#clear-button");
+var resetButton = document.querySelector("#reset-button");
 
 // --event listeners
-submitGuessButton.addEventListener("click", displayInformation);
-rangeButton.addEventListener('click', updateRangeValue);
+submitGuessButton.addEventListener("click", submitGuesses);
+rangeButton.addEventListener("click", updateRangeValue);
+clearButton.addEventListener("click", clearForms);
+resetButton.addEventListener("click", resetGame);
+
+function resetGame() {
+	clearForms();
+	updateRangeValue(event);
+}
+
+function clearForms() {
+	inputGuessOne.value = "";
+	inputGuessTwo.value = "";
+}
 
 // --functions
 // change the set range to what the users input
@@ -35,7 +49,7 @@ maxUser.innerText = maxRange.value;
 }
 
 // Change the challenger names and guess numbers to what the users input
-function displayInformation() {
+function submitGuesses() {
  playerNameTwo.innerHTML = inputNameTwo.value;
  playerNameOne.innerHTML = inputNameOne.value;
  guessDisplayOne.innerHTML = inputGuessOne.value;
