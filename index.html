@@ -20,14 +20,10 @@
 	  	  </header>
 	  		<section>
 	  		  <form>
-	  			<div>
-	  			  <p>Min Range</p> <br/>
+	  			  <p id="minRangeP">Min Range</p> <br/>
 	  			  <input type = "number" id="minRange">
-	  			</div>
-	  			<div>
-	  			  <p>Max Range</p> <br/>
+	  			  <p id="maxRangeP">Max Range</p> <br/>
 	  			  <input type = "number" id="maxRange">
-	  			</div>
 	  			<button class="updateRange">UPDATE
 	  			</button>
 	  		  </form>
@@ -36,24 +32,26 @@
 	  		<article id="current-range" class="article-left">
 	  			<p>The Current Range is <strong class="minUser">1</strong> to <strong class="maxUser">100</strong></p>
 	  			<h5>Challenger 1</h5>
-	 				<form class="clear-form">
+
+	 			  <form>
+	 				<div>
+	 				   <p>Name</p>
+  					  <input type="text" id="input-name-one"/>
+	 				    </div>
 	 					<div>
-	 						Name<br/>
-  						<input type="text" id="input-name-one"/>
-	 					</div>
-	 					<div>
-	  					Guess<br/>
-	  					<input type = "number" id="input-guess-one"> 
+	  					  <p>Guess</p>
+	  					  <input type = "number" id="input-guess-one"> 
+
 	  				</div>
 	  			</form>
 	  			<h5>Challenger 2</h5>
   				<form class="clear-form"> 
 	 					<div>
-	 						Name<br/>
+	 					 <p>Name</p>
 	  					<input type="text" id="input-name-two">
 	  				</div>
 	  				<div>
-	  					Guess<br/>
+	  					<p>Guess</p>
 	  					<input type="number" id="input-guess-two">
 	  				</div>
 	  			</form>
@@ -62,7 +60,7 @@
 	  				SUBMIT GUESS</button>
 	  				<button id="reset-button">RESET GAME</button>
 	  				<button id="clear-button">CLEAR GAME</button>
-	  			</section>
+	  			 </section>
 	  		</article>
 	  		<article id="latest-score" class="article-left">
 	  			<section class="score-header"><h5>Latest Score</h5>

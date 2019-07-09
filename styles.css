@@ -30,19 +30,18 @@ body {
 
 h1 {
   color: #DD1972;
-	font-size: 7vw;
+	font-size: 5vw;
 	font-weight: 300;
-	margin: .25em;
-  text-align: center;
+    text-align: center;
 }
 
 h2 { 
 	color: white;
-	font-size: 2vw;
+	font-size: .93em;
 	font-weight: 300;
 	margin: 0;
-  text-align: center;
-  line-height: 100%;
+    text-align: center;
+    line-height: 135%;
 }
 
 #font-deck {
@@ -51,16 +50,16 @@ h2 {
 }
 
 h5{
-	color: gray;
-	font-size: 2vw;
+	color: #404041;
+	font-size: 18px;
 	font-weight: 700;
 	height: 25px;
-
+	margin-top: 6px;
 }
 
 p {
 	color: gray;
-	font-size: 2vw;
+	font-size: 15px;
 	font-weight: 300;
 }
 
@@ -69,9 +68,6 @@ form {
 	height: 3vw;
 }
 
-#set-range input {
-	width: 130%;
-}
 
 /* This is the main area, these settings tell section right & left to center */
 main {
@@ -84,10 +80,10 @@ main {
 	background-color: #F7F7F7;
 	border-left: solid 2px #6E6E6E;
 	border-right: solid 1px #6E6E6E;
+	border-bottom: solid 2px #6E6E6E;
 	display: flex;
 	flex-direction: column;
-	height: 675px;
-	max-width: 550px;
+	height: 700px;
 	width: 50%;
 }
 
@@ -96,9 +92,10 @@ main {
 	background-color: #D0D2D3;
 	border-left: solid 1px #6E6E6E;
 	border-right: solid 2px #6E6E6E;
+	border-bottom: solid 2px #6E6E6E;
 	display: flex;
 	flex-direction: column;
-	height: 675px;
+	height: 700px;
 	width: 50%;
 }
 
@@ -107,11 +104,11 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 120px;
+	height: 130px;
 }
 
 #set-range header {
-	height: 40px;
+	/*height: 40px;*/
 	width: 95%;
 	justify-content: flex-start;
 	display: flex;
@@ -123,8 +120,9 @@ main {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
-	height: 80px;
+	/*height: 80px;*/
 	width: 95%;
+	margin-top: 30px;
 }
 
 #set-range form {
@@ -132,8 +130,15 @@ main {
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
-	height: 60px;
+	height: 45px;
 	align-items: flex-end;
+}
+
+#set-range input {
+	width: 115%;
+}
+
+#minRangeP {	
 }
 
 /* Current Range section */
@@ -141,7 +146,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 330px;
+	height: 300px
 }
 
 #current-range p,
@@ -163,6 +168,7 @@ main {
 #current-range section {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 12px;
 }
 
 #current-range button {
@@ -170,15 +176,16 @@ main {
 	height: 35px;
 	width: 32%;
 	color: white;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 700;
-	border-radius: 20px
+	border-radius: 20px;
+	margin: 5px;
 }
 
 .updateRange {
 	background-color: gray;
-	height: 35px;
-	width: 110px;
+	height: 32px;
+	width: 20%;
 	color: white;
 	font-size: 16px;
 	font-weight: 700;
@@ -189,6 +196,15 @@ input {
 	height: 35px;
 	border: solid 2px lightgray;
 	border-radius: 2px;
+}
+
+#input-name-one {
+	width: 130%;
+	margin-left: 10px;
+}
+
+#input-guess-one {
+
 }
 
 /* These are general settings for all of the article cards on the right & left side */
@@ -273,25 +289,86 @@ article {
 	height: 40px;
 	justify-content: space-between;
 	margin: 0;
-	/*width: 90%;*/
+	width: 90%;
 }
 
 .minute-count {
 	color: gray;
 	display: flex;
 	flex-direction: row;
+	margin-left: 10%;
 }
 
 .guess-count {
 	color: gray;
 	display: flex;
 	flex-direction: row;
-	margin-right: 10px;
+	justify-content: space-between;
+	margin-left: 20%;
 }
 
 .x-icon {
 	border-radius: 100%;
 	height: 22px;
+	margin-left: 35%;
+}
+
+/* Latest-score card*/
+
+#latest-score * {
+	padding: 0;
+}
+
+#latest-score {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 200px;
+}
+
+.score-header {
+	display: flex;
+	justify-content: flex-start;
+	width: 95%;
+	height: 25px;
+}
+
+.main-score {
+	display: flex;
+	flex-direction: row;
+	width: 95%;
+	height: 140px
+}
+
+.main-score article {
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	align-items: center;
+	/*justify-content: center;*/
+}
+
+.main-score-left {
+	border-right: solid 1px lightgray;
+}
+
+.main-score-right {
+	border-left: solid 1px lightgray;
+}
+
+.minUser,
+.maxUser {
+	color: #404041;
+}
+
+#player-name-one {
+}
+
+button:hover,
+#submit-guess-button:hover,
+#reset-button:hover,
+#clear-button:hover {
+	background-color: #DD1972;
 }
 
 /*Media Query section*/
@@ -371,7 +448,7 @@ article {
 }
 
 	header h1 {
-		font-size: 8vw;
+		font-size: 7vw;
 		/*line-height: 48%;*/
 		/*font-size: 40pt;*/
 	}
@@ -380,60 +457,4 @@ article {
 		font-size: 3vw;
 	}
 	
-}
-
-
-
-
-
-
-/* Latest-score card*/
-
-#latest-score * {
-	margin: 0;
-	padding: 0;
-}
-
-#latest-score {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 200px;
-}
-
-.score-header {
-	display: flex;
-	justify-content: flex-start;
-	width: 95%;
-	height: 50px;
-}
-
-.main-score {
-	display: flex;
-	flex-direction: row;
-	width: 95%;
-	height: 150px
-}
-
-.main-score article {
-	display: flex;
-	width: 50%;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.main-score-left {
-	border-right: solid 1px lightgray;
-}
-
-.main-score-right {
-	border-left: solid 1px lightgray;
-}
-
-button:hover,
-#submit-guess-button:hover,
-#reset-button:hover,
-#clear-button:hover {
-	background-color: #DD1972;
 }
