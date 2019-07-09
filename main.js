@@ -29,6 +29,10 @@ submitGuessButton.addEventListener("click", submitGuesses);
 rangeButton.addEventListener("click", updateRangeValue);
 clearButton.addEventListener("click", clearForms);
 resetButton.addEventListener("click", resetGame);
+submitGuessButton.addEventListener("click", winnerOne);
+submitGuessButton.addEventListener("click", winnerTwo);
+// resetButton.addEventListener("keypress", disableButtons);
+// clearButton.addEventListener("keypress", disableButtons);
 
 function resetGame() {
 	clearForms();
@@ -39,6 +43,8 @@ function clearForms() {
 	inputGuessOne.value = "";
 	inputGuessTwo.value = "";
 }
+
+
 
 // --functions
 // change the set range to what the users input
@@ -64,12 +70,53 @@ maxUser.innerText = maxRange.value;
 randomNumber = Math.floor(Math.random() * (parseInt(maxRange.value) - parseInt(minRange.value)) + (parseInt(minRange.value)));
 }
 
+
+minRange.addEventListener("keyup", enableUpdateButton);
+maxRange.addEventListener("keyup", enableUpdateButton);
+minRange.addEventListener("click", enableUpdateButton);
+maxRange.addEventListener("click", enableUpdateButton);
+
+function enableUpdateButton() {
+	if(minRange.value.length === 0 && maxRange.value.length === 0 || minRange.value.length === 0 || maxRange.value.length === 0 ) {
+		rangeButton.disabled = true;
+		rangeButton.style.backgroundColor = "lightgray"
+	} else { 
+		rangeButton.disabled = false;
+		rangeButton.style.backgroundColor = "#808080"
+	}
+}
+
+
+inputGuessOne.addEventListener("keyup", disableButtons);
+inputGuessTwo.addEventListener("keyup", disableButtons);
+inputGuessOne.addEventListener("click", disableButtons);
+inputGuessTwo.addEventListener("click", disableButtons);
+
+function disableButtons() {
+	if(inputGuessOne.value.length === 0 && inputGuessTwo.value.length === 0 || inputGuessTwo.value.length === 0 || inputGuessOne.value.length === 0) {
+		clearButton.disabled = true;
+		resetButton.disabled = true;
+		clearButton.style.backgroundColor = "lightgray";
+		resetButton.style.backgroundColor = "lightgray";
+	} else {
+		clearButton.disabled = false;
+		resetButton.disabled = false;
+		clearButton.style.backgroundColor = "#808080";
+		resetButton.style.backgroundColor = "#808080";
+	} 
+}
+
+
+
+
+
+
 // let the users play and guess the correct number
 // player 1
-submitGuessButton.addEventListener('click', function() { 
+function winnerOne() {
 if (inputGuessOne.value == randomNumber) {	 
 guessMessageOne.innerHTML = correctGuess
-			+ attemptUserOne + " Attemps ";
+			resetGame();
 } 
 else if(inputGuessOne.value > randomNumber)
 {
@@ -80,13 +127,13 @@ else
 { 
 	attemptUserOne++; 
 	guessMessageOne.innerHTML = tooLow;
-}});
+}};
 
 // player 2
-submitGuessButton.addEventListener('click', function() { 
+function winnerTwo() {
 if (inputGuessTwo.value == randomNumber) {	 
 guessMessageTwo.innerHTML = correctGuess
-			+ attemptUserTwo + " Attemps ";
+			resetGame();
 } 
 else if(inputGuessTwo.value > randomNumber)
 {
@@ -97,4 +144,4 @@ else
 { 
 	attemptUserTwo++; 
 	guessMessageTwo.innerHTML = tooLow;
-}});
+}};
