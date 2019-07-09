@@ -15,24 +15,29 @@ var playerNameOne = document.querySelector(".player-name-one");
 var playerNameTwo = document.querySelector(".player-name-two");
 var guessMessageOne = document.querySelector("#guess-message-one");
 var guessMessageTwo = document.querySelector("#guess-message-two");
+var clearButton = document.querySelector("#clear-button");
+var resetButton = document.querySelector("#reset-button");
 var randomNumber = Math.floor(Math.random() * (maxRange - minRange) + minRange);
-var attemptUserOne = 1;
-var attemptUserTwo = 1;
 var tooLow = "that's too low";
 var tooHigh = "that's too high";
 var correctGuess = "BOOM! ";
-var clearButton = document.querySelector("#clear-button");
-var resetButton = document.querySelector("#reset-button");
+var attemptUserOne = 1;
+var attemptUserTwo = 1;
 
-// --event listeners
-submitGuessButton.addEventListener("click", submitGuesses);
-rangeButton.addEventListener("click", updateRangeValue);
 clearButton.addEventListener("click", clearForms);
+inputGuessOne.addEventListener("click", disableButtons);
+inputGuessOne.addEventListener("keyup", disableButtons);
+inputGuessTwo.addEventListener("click", disableButtons);
+inputGuessTwo.addEventListener("keyup", disableButtons);
+maxRange.addEventListener("click", enableUpdateButton);
+maxRange.addEventListener("keyup", enableUpdateButton);
+minRange.addEventListener("click", enableUpdateButton);
+minRange.addEventListener("keyup", enableUpdateButton);
+rangeButton.addEventListener("click", updateRangeValue);
 resetButton.addEventListener("click", resetGame);
+submitGuessButton.addEventListener("click", submitGuesses);
 submitGuessButton.addEventListener("click", winnerOne);
 submitGuessButton.addEventListener("click", winnerTwo);
-// resetButton.addEventListener("keypress", disableButtons);
-// clearButton.addEventListener("keypress", disableButtons);
 
 function resetGame() {
 	clearForms();
@@ -44,9 +49,6 @@ function clearForms() {
 	inputGuessTwo.value = "";
 }
 
-
-
-// --functions
 // change the set range to what the users input
 function updateRangeValue(event){
 event.preventDefault();
@@ -70,12 +72,6 @@ maxUser.innerText = maxRange.value;
 randomNumber = Math.floor(Math.random() * (parseInt(maxRange.value) - parseInt(minRange.value)) + (parseInt(minRange.value)));
 }
 
-
-minRange.addEventListener("keyup", enableUpdateButton);
-maxRange.addEventListener("keyup", enableUpdateButton);
-minRange.addEventListener("click", enableUpdateButton);
-maxRange.addEventListener("click", enableUpdateButton);
-
 function enableUpdateButton() {
 	if(minRange.value.length === 0 && maxRange.value.length === 0 || minRange.value.length === 0 || maxRange.value.length === 0 ) {
 		rangeButton.disabled = true;
@@ -85,12 +81,6 @@ function enableUpdateButton() {
 		rangeButton.style.backgroundColor = "#808080"
 	}
 }
-
-
-inputGuessOne.addEventListener("keyup", disableButtons);
-inputGuessTwo.addEventListener("keyup", disableButtons);
-inputGuessOne.addEventListener("click", disableButtons);
-inputGuessTwo.addEventListener("click", disableButtons);
 
 function disableButtons() {
 	if(inputGuessOne.value.length === 0 && inputGuessTwo.value.length === 0 || inputGuessTwo.value.length === 0 || inputGuessOne.value.length === 0) {
@@ -105,11 +95,6 @@ function disableButtons() {
 		resetButton.style.backgroundColor = "#808080";
 	} 
 }
-
-
-
-
-
 
 // let the users play and guess the correct number
 // player 1
