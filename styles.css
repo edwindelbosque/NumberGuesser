@@ -101,46 +101,32 @@ main {
 
 /* Set-range article box */
 #set-range {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	
 	height: 125px;
 }
 
 #set-range header {
 	/*height: 40px;*/
 	width: 95%;
-	justify-content: flex-start;
-	display: flex;
+	margin-left: 1em;
 	color: black;
-	align-items: center;
 }
 
 #set-range section {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	/*height: 80px;*/
-	width: 95%;
-	margin-top: 35px;
+	/*display: flex;*/
+	width: 100%;
+	margin: .75em;
+	/*padding: 2em;*/
+	/*margin-top: 35px;*/
 }
 
 #set-range form {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 100%;
-	height: 45px;
-	align-items: flex-end;
+	/*width: 100%;*/
+	height: 150px;
 }
 
 #set-range input {
-	width: 115%;
-}
-
-#minRangeP {
-    width: 30%;
-	margin-bottom: 50px;	
+	width: 30%;
 }
 
 /* Current Range section */
@@ -163,8 +149,8 @@ main {
 }
 
 #current-range form {
-	display: flex;
-	flex-direction: row;
+	/*display: flex;
+	flex-direction: row;*/
 	height: 60px;
 }
 
@@ -370,10 +356,33 @@ article {
 	text-decoration: underline;
 }
 
-#minRangeP,
+#minRange {
+	/*margin-left: 20px;
+    margin-right: 20px;*/
+}
+
+#maxRange {
+	margin-left: 20px;
+    margin-right: 30px;
+}
+
+#minRangeP {
+	/*width: 250px;*/
+}
+
+#minRangeP {
+	/*margin-left: 36px;*/
+    width: 30%;
+    display: inline-block;
+	/*margin-bottom: 50px;*/	
+}
+
 #maxRangeP {
-	margin-bottom: 35px;
-	width: 60px;
+	margin-bottom: 5px;
+	margin-left: 27px;
+	width: 200px;
+	display: inline-block;
+	/*margin-bottom: 50px;*/
 }
 
 #player-name-one {
