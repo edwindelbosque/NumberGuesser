@@ -18,9 +18,10 @@ var guessMessageTwo = document.querySelector("#guess-message-two");
 var randomNumber = Math.floor(Math.random() * (maxRange - minRange) + minRange);
 var attemptUserOne = 1;
 var attemptUserTwo = 1;
-var tooLow = "that's too low"
-var tooHigh = "that's too high"
-var correctGuess = "BOOM! "
+var tooLow = "that's too low";
+var tooHigh = "that's too high";
+var correctGuess = "BOOM! ";
+
 
 // --event listeners
 submitGuessButton.addEventListener("click", displayInformation);
