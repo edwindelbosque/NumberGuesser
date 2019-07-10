@@ -131,10 +131,11 @@ main {
 
 /* Current Range section */
 #current-range {
-	display: flex;
+	/*display: flex;
 	flex-direction: column;
-	align-items: center;
-	height: 325px;
+	align-items: center;*/
+	height: 450px;
+	padding-left: 8px;
 }
 
 #current-range p,
@@ -142,7 +143,7 @@ main {
 #current-range form,
 #current-range section {
 	width: 95%;
-	margin-top: 12px;
+	margin-top: 7px;
 }
 
 #current-range h5 {
@@ -151,7 +152,7 @@ main {
 #current-range form {
 	/*display: flex;
 	flex-direction: row;*/
-	height: 60px;
+	height: 130px;
 }
 
 #current-range section {
@@ -190,12 +191,22 @@ input {
 }
 
 #input-name-one {
-	width: 130%;
+	width: 60%;
+	margin-left: 10px;
+}
+
+#input-name-two {
+	width: 60%;
 	margin-left: 10px;
 }
 
 #input-guess-one {
-	width: 130%;
+	width: 60%;
+	margin-left: 10px;
+}
+
+#input-guess-two {
+	width: 60%;
 	margin-left: 10px;
 }
 
