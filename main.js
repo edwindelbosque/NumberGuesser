@@ -23,6 +23,13 @@ var tooHigh = "that's too high";
 var correctGuess = "BOOM! ";
 var attemptUserOne = 1;
 var attemptUserTwo = 1;
+<<<<<<< HEAD
+var tooLow = "that's too low";
+var tooHigh = "that's too high";
+var correctGuess = "BOOM! ";
+
+=======
+>>>>>>> 7b0e32323c56073f50649b0ac019a48332c98ccf
 
 clearButton.addEventListener("click", clearForms);
 inputGuessOne.addEventListener("click", disableButtons);
