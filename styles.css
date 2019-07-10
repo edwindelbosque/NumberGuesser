@@ -389,6 +389,7 @@ article {
 }
 
 button:hover,
+.updateRange:hover,
 #submit-guess-button:hover,
 #reset-button:hover,
 #clear-button:hover {
@@ -396,11 +397,20 @@ button:hover,
 }
 
 button:disabled,
+.updateRange:disabled,
+#submit-guess-button:disabled,
 #reset-button:disabled,
 #clear-button:disabled {
 	background-color: #D0D2D3;
 }
 
+button:active,
+.updateRange:active,
+#submit-guess-button:active,
+#reset-button:active,
+#clear-button:active {
+	background-color: #8F0945;
+}
 
 /*Media Query section*/
 

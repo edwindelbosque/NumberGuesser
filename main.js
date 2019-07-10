@@ -96,24 +96,20 @@ randomNumber = Math.floor(Math.random() * (parseInt(maxRange.value) - parseInt(m
 function enableUpdateButton() {
 	if(minRange.value.length === 0 && maxRange.value.length === 0 || minRange.value.length === 0 || maxRange.value.length === 0 ) {
 		rangeButton.disabled = true;
-		rangeButton.style.backgroundColor = "lightgray"
 	} else { 
 		rangeButton.disabled = false;
-		rangeButton.style.backgroundColor = "#808080"
 	}
 }
 
 function disableButtons() {
 	if(inputGuessOne.value.length === 0 && inputGuessTwo.value.length === 0 || inputGuessTwo.value.length === 0 || inputGuessOne.value.length === 0) {
+		submitGuessButton.disabled = true;
 		clearButton.disabled = true;
 		resetButton.disabled = true;
-		clearButton.style.backgroundColor = "lightgray";
-		resetButton.style.backgroundColor = "lightgray";
 	} else {
+		submitGuessButton.disabled = false;
 		clearButton.disabled = false;
 		resetButton.disabled = false;
-		clearButton.style.backgroundColor = "#808080";
-		resetButton.style.backgroundColor = "#808080";
 	} 
 }
 
