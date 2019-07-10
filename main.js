@@ -45,6 +45,22 @@ resetButton.addEventListener("click", resetGame);
 submitGuessButton.addEventListener("click", submitGuesses);
 submitGuessButton.addEventListener("click", winnerOne);
 submitGuessButton.addEventListener("click", winnerTwo);
+rangeButton.addEventListener("click", checkErrors);
+
+function checkErrors() {
+	if (minRange.value > maxRange.value) {
+		minRange.style.borderColor = "red";
+		maxRange.style.borderColor = "red";
+	} else if (minRange.value == maxRange.value) {
+		minRange.style.borderColor = "red";
+		maxRange.style.borderColor = "red";
+	} else {
+		minRange.style.borderColor = "lightgray";
+		maxRange.style.borderColor = "lightgray";
+	}
+}
+
+
 
 function resetGame() {
 	clearForms();
