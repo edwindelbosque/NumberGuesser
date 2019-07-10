@@ -12,6 +12,9 @@ var submitGuessButton = document.querySelector("#submit-guess-button");
 var guessDisplayOne = document.querySelector("#guess-display-one")
 var guessDisplayTwo = document.querySelector("#guess-display-two")
 var playerNameOne = document.querySelector(".player-name-one");
+
+var displayName = document.querySelector('#p1');
+
 var playerNameTwo = document.querySelector(".player-name-two");
 var guessMessageOne = document.querySelector("#guess-message-one");
 var guessMessageTwo = document.querySelector("#guess-message-two");
@@ -26,6 +29,7 @@ var attemptUserTwo = 1;
 var tooLow = "that's too low";
 var tooHigh = "that's too high";
 var correctGuess = "BOOM! ";
+var scoreHistory = document.querySelector(".section-right");
 
 clearButton.addEventListener("click", clearForms);
 inputGuessOne.addEventListener("click", disableButtons);
@@ -39,8 +43,6 @@ minRange.addEventListener("keyup", enableUpdateButton);
 rangeButton.addEventListener("click", updateRangeValue);
 resetButton.addEventListener("click", resetGame);
 submitGuessButton.addEventListener("click", submitGuesses);
-submitGuessButton.addEventListener("click", winnerOne);
-submitGuessButton.addEventListener("click", winnerTwo);
 rangeButton.addEventListener("click", checkErrors);
 
 function checkErrors() {
@@ -55,8 +57,6 @@ function checkErrors() {
 		maxRange.style.borderColor = "lightgray";
 	}
 }
-
-
 
 function resetGame() {
 	clearForms();
@@ -77,10 +77,12 @@ maxUser.innerText = maxRange.value;
 
 // Change the challenger names and guess numbers to what the users input
 function submitGuesses() {
- playerNameTwo.innerHTML = inputNameTwo.value;
- playerNameOne.innerHTML = inputNameOne.value;
+ playerNameTwo.innerText = inputNameTwo.value;
+ playerNameOne.innerText = inputNameOne.value;
  guessDisplayOne.innerHTML = inputGuessOne.value;
  guessDisplayTwo.innerHTML = inputGuessTwo.value;
+ winnerOne();
+ winnerTwo();
 };
 
 // create random number from the users min and max range
@@ -119,8 +121,30 @@ function disableButtons() {
 // player 1
 function winnerOne() {
 if (inputGuessOne.value == randomNumber) {	 
-guessMessageOne.innerHTML = correctGuess
-			resetGame();
+	guessMessageOne.innerHTML = correctGuess
+	scoreHistory.insertAdjacentHTML("afterbegin", `<article id="results" class="article-right">
+	  			<header>
+		  			<p><strong id="player-name-one">${inputNameOne.value}</strong></p>
+		  			<p>VS</p>
+		  			<p><strong id="player-name-two">${inputNameTwo.value}</strong></p>
+		  		</header>
+		  		<article>
+		  			<h3>${inputNameOne.value}</h3>
+		  			<h4>WINNER</h4>
+		  		</article>
+		  		<footer>
+		  			<div class="guess-count">
+			  			<p><strong>${attemptUserOne}</strong></p>
+			  			<p>GUESSES</p>
+		  			</div>
+		  			<div class="minute-count">
+			  			<p><strong>1.35</strong></p>
+			  			<p>MINUTES</p>
+		  			</div>
+		  			<img class="x-icon" src="images/x-button.png"/>
+		  		</footer>
+	  		</article>`); 
+	resetGame();
 } 
 else if(inputGuessOne.value > randomNumber)
 {
@@ -136,9 +160,31 @@ else
 // player 2
 function winnerTwo() {
 if (inputGuessTwo.value == randomNumber) {	 
-guessMessageTwo.innerHTML = correctGuess
-			resetGame();
-} 
+	guessMessageTwo.innerHTML = correctGuess
+	scoreHistory.insertAdjacentHTML("afterbegin", `<article id="results" class="article-right">
+	  			<header>
+		  			<p><strong id="player-name-one">${inputNameOne.value}</strong></p>
+		  			<p>VS</p>
+		  			<p><strong id="player-name-two">${inputNameTwo.value}</strong></p>
+		  		</header>
+		  		<article>
+		  			<h3>${inputNameTwo.value}</h3>
+		  			<h4>WINNER</h4>
+		  		</article>
+		  		<footer>
+		  			<div class="guess-count">
+			  			<p><strong>${attemptUserTwo}</strong></p>
+			  			<p>GUESSES</p>
+		  			</div>
+		  			<div class="minute-count">
+			  			<p><strong>1.35</strong></p>
+			  			<p>MINUTES</p>
+		  			</div>
+		  			<img class="x-icon" src="images/x-button.png"/>
+		  		</footer>
+	  		</article>`); 
+	resetGame();
+}
 else if(inputGuessTwo.value > randomNumber)
 {
 	attemptUserTwo++; 
@@ -149,3 +195,8 @@ else
 	attemptUserTwo++; 
 	guessMessageTwo.innerHTML = tooLow;
 }};
+
+
+
+
+
