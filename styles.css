@@ -356,8 +356,6 @@ article {
 	margin-right: 2%;
 }
 
-/* Latest-score card*/
-
 #latest-score * {
 	padding: 0;
 }
@@ -444,6 +442,13 @@ article {
 	position: absolute;
 	visibility:hidden;
 	display:none;
+}
+
+#submit-guess-button,
+#reset-button,
+#clear-button {
+	position: relative;
+	bottom: 40px;
 }
 
 button:hover,
@@ -571,7 +576,4 @@ svg {
 	#set-range input {
     width: 95%;
     }
-
-
-	
 }
