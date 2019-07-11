@@ -23,7 +23,9 @@
 	  			  <p id="minRangeP">Min Range</p>
 	  			  <p id="maxRangeP">Max Range</p>
 	  			  <input type = "number" id="minRange">
+	  			  <p class="toggle-off" id="range-error">Invalid range <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.17 7.21"><defs><style>.cls-1{fill:#dd1972;}.cls-2{fill:#fff;}</style></defs><title>error-icon</title><g id="Layer_1" data-name="Layer 1"><path class="cls-1" d="M.26,6,3.62.38a.63.63,0,0,1,.88,0L7.91,6.08a.61.61,0,0,1-.43,1.06L.71,7.07A.63.63,0,0,1,.26,6Z"/><path class="cls-2" d="M4.5,4.74H3.68L3.55,2.39H4.63Zm-.94.88a.49.49,0,0,1,.14-.36.57.57,0,0,1,.39-.12.57.57,0,0,1,.39.12.53.53,0,0,1,.13.36A.47.47,0,0,1,4.47,6a.56.56,0,0,1-.38.12A.61.61,0,0,1,3.7,6,.47.47,0,0,1,3.56,5.62Z"/></g></svg> </p>
 	  			  <input type = "number" id="maxRange">
+	  			  <p class="toggle-off" id="range-error">Invalid range <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.17 7.21"><defs><style>.cls-1{fill:#dd1972;}.cls-2{fill:#fff;}</style></defs><title>error-icon</title><g id="Layer_1" data-name="Layer 1"><path class="cls-1" d="M.26,6,3.62.38a.63.63,0,0,1,.88,0L7.91,6.08a.61.61,0,0,1-.43,1.06L.71,7.07A.63.63,0,0,1,.26,6Z"/><path class="cls-2" d="M4.5,4.74H3.68L3.55,2.39H4.63Zm-.94.88a.49.49,0,0,1,.14-.36.57.57,0,0,1,.39-.12.57.57,0,0,1,.39.12.53.53,0,0,1,.13.36A.47.47,0,0,1,4.47,6a.56.56,0,0,1-.38.12A.61.61,0,0,1,3.7,6,.47.47,0,0,1,3.56,5.62Z"/></g></svg></p>
 	  			<button class="updateRange" disabled="false">UPDATE
 	  			</button>
 	  		  </form>
@@ -33,28 +35,31 @@
 	  			<p>The Current Range is <strong class="minUser">1</strong> to <strong class="maxUser">100</strong></p>
 	  			<h5>Challenger 1</h5>
 	  			<div id="player-one">
-	 			      <form>
-	 				   <p id="input-name-p">Name</p>
-	 				   <p id="input-name-g">Guess</p>
+	 			    <form>
+	 				    <p id="input-name-p">Name</p>
+	 				    <p id="input-name-g">Guess</p>
   					  <input type="text" id="input-name-one"/>
-	  				 <input type="number" id="input-guess-one">
+              <p class="toggle-off" id="name-one-error">Name missing <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.17 7.21"><defs><style>.cls-1{fill:#dd1972;}.cls-2{fill:#fff;}</style></defs><title>error-icon</title><g id="Layer_1" data-name="Layer 1"><path class="cls-1" d="M.26,6,3.62.38a.63.63,0,0,1,.88,0L7.91,6.08a.61.61,0,0,1-.43,1.06L.71,7.07A.63.63,0,0,1,.26,6Z"/><path class="cls-2" d="M4.5,4.74H3.68L3.55,2.39H4.63Zm-.94.88a.49.49,0,0,1,.14-.36.57.57,0,0,1,.39-.12.57.57,0,0,1,.39.12.53.53,0,0,1,.13.36A.47.47,0,0,1,4.47,6a.56.56,0,0,1-.38.12A.61.61,0,0,1,3.7,6,.47.47,0,0,1,3.56,5.62Z"/></g></svg></p>
+	  				  <input type="number" id="input-guess-one">
+              <p class="toggle-off" id="guess-one-error">Invalid guess <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.17 7.21"><defs><style>.cls-1{fill:#dd1972;}.cls-2{fill:#fff;}</style></defs><title>error-icon</title><g id="Layer_1" data-name="Layer 1"><path class="cls-1" d="M.26,6,3.62.38a.63.63,0,0,1,.88,0L7.91,6.08a.61.61,0,0,1-.43,1.06L.71,7.07A.63.63,0,0,1,.26,6Z"/><path class="cls-2" d="M4.5,4.74H3.68L3.55,2.39H4.63Zm-.94.88a.49.49,0,0,1,.14-.36.57.57,0,0,1,.39-.12.57.57,0,0,1,.39.12.53.53,0,0,1,.13.36A.47.47,0,0,1,4.47,6a.56.56,0,0,1-.38.12A.61.61,0,0,1,3.7,6,.47.47,0,0,1,3.56,5.62Z"/></g></svg></p>
 	  				</form>
-	  				</div>
-
-	  				<div id="player-two">
+	  			</div>
+          <div id="player-two">
 	  				<h5>Challenger 2</h5>
   					<form class="clear-form"> 
-	 					 <p id="input-name-p"> Name</p>
-	 					 <p id="input-name-g">Guess</p>
+	 					  <p id="input-name-p"> Name</p>
+	 					  <p id="input-name-g">Guess</p>
 	  					<input type="text" id="input-name-two">
-	  					<input type="number" id="input-guess-two">	
+              <p class="toggle-off" id="name-two-error">Name missing <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.17 7.21"><defs><style>.cls-1{fill:#dd1972;}.cls-2{fill:#fff;}</style></defs><title>error-icon</title><g id="Layer_1" data-name="Layer 1"><path class="cls-1" d="M.26,6,3.62.38a.63.63,0,0,1,.88,0L7.91,6.08a.61.61,0,0,1-.43,1.06L.71,7.07A.63.63,0,0,1,.26,6Z"/><path class="cls-2" d="M4.5,4.74H3.68L3.55,2.39H4.63Zm-.94.88a.49.49,0,0,1,.14-.36.57.57,0,0,1,.39-.12.57.57,0,0,1,.39.12.53.53,0,0,1,.13.36A.47.47,0,0,1,4.47,6a.56.56,0,0,1-.38.12A.61.61,0,0,1,3.7,6,.47.47,0,0,1,3.56,5.62Z"/></g></svg></p>
+	  					<input type="number" id="input-guess-two">
+              <p class="toggle-off" id="guess-two-error">Invalid guess <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.17 7.21"><defs><style>.cls-1{fill:#dd1972;}.cls-2{fill:#fff;}</style></defs><title>error-icon</title><g id="Layer_1" data-name="Layer 1"><path class="cls-1" d="M.26,6,3.62.38a.63.63,0,0,1,.88,0L7.91,6.08a.61.61,0,0,1-.43,1.06L.71,7.07A.63.63,0,0,1,.26,6Z"/><path class="cls-2" d="M4.5,4.74H3.68L3.55,2.39H4.63Zm-.94.88a.49.49,0,0,1,.14-.36.57.57,0,0,1,.39-.12.57.57,0,0,1,.39.12.53.53,0,0,1,.13.36A.47.47,0,0,1,4.47,6a.56.56,0,0,1-.38.12A.61.61,0,0,1,3.7,6,.47.47,0,0,1,3.56,5.62Z"/></g></svg></p>
 	  			    </form>
 	  			    </div>
 	  			<section id="button-section">
 	  				<button class="guessSubmit" id="submit-guess-button">
 	  				SUBMIT GUESS</button>
-	  				<button id="reset-button" disabled="false">RESET GAME</button>
-	  				<button id="clear-button" disabled="false">CLEAR GAME</button>
+	  				<button id="reset-button" disabled="false" value="reset">RESET GAME</button>
+	  				<button id="clear-button" disabled="false" value="reset">CLEAR GAME</button>
 	  			 </section>
 	  		</article>
 	  		<article id="latest-score" class="article-left">
@@ -62,7 +67,7 @@
 	  			</section>
 	  			<section class="main-score">
 	  				<article class="main-score-left">
-	  					<p><strong class="player-name-one">Challenger 1 Name</strong></p>
+	  					<p><strong class="player-name-one" id="p1">Challenger 1 Name</strong></p>
 	  					<p>current guess</p>
 	  					<h1><strong id="guess-display-one">-</strong></h1>
 	  					<p id="guess-message-one"></p>
@@ -77,7 +82,7 @@
 	  		</article>
 	  	</section>
 	  	<section class="section-right">	
-	  		<article id="results" class="article-right">
+	  		<!-- <article id="results" class="article-right">
 	  			<header>
 		  			<p><strong id="player-name-one">CHALLENGER 1 NAME</strong></p>
 		  			<p>VS</p>
@@ -98,7 +103,7 @@
 		  			</div>
 		  			<img class="x-icon" src="images/x-button.png"/>
 		  		</footer>
-	  		</article>
+	  		</article> -->
   		</section>
   	</main>
   	<script src="main.js">
