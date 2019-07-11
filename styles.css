@@ -37,7 +37,7 @@ h1 {
 
 h2 { 
 	color: white;
-	font-size: 1.1em;
+	font-size: 2vw;
 	font-weight: 300;
 	margin: 0;
     text-align: center;
@@ -101,7 +101,6 @@ main {
 
 /* Set-range article box */
 #set-range {
-	
 	height: 125px;
 }
 
@@ -131,33 +130,36 @@ main {
 
 /* Current Range section */
 #current-range {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 325px;
+	height: 375px;
+	padding-left: 8px;
 }
 
-#current-range p,
+#current-range p {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/*#current-range p,*/
 #current-range h5,
-#current-range form,
+/*#current-range form,*/
 #current-range section {
 	width: 95%;
-	margin-top: 12px;
+	margin-top: 5px;
 }
 
 #current-range h5 {
+	margin-left: 10px;
 }
 
-#current-range form {
-	/*display: flex;
-	flex-direction: row;*/
-	height: 60px;
+#current-range form { 
+	height: 130px;
 }
 
 #current-range section {
 	display: flex;
 	justify-content: space-between;
 	height: 50px;
+	margin-left: 7px;
 }
 
 #current-range button {
@@ -165,9 +167,9 @@ main {
 	justify-content: space-around;
 	background-color: gray;
 	height: 35px;
-	width: 120px;
+	width: 175px;
 	color: white;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 700;
 	border-radius: 20px;
 	margin: 5px;
@@ -189,14 +191,56 @@ input {
 	border-radius: 2px;
 }
 
+#player-one {
+	height: 100px;
+}
+
+#player-two {
+	height: 125px;
+}
+
+#player-one p {
+	display: inline-block;
+}
+
 #input-name-one {
-	width: 130%;
+	width: 55%;
+	margin-left: 5px;
+	display: inline-block;
+}
+
+#input-name-two {
+	width: 55%;
+	margin-left: 5px;
+	display: inline-block;
+}
+
+#input-name-p {
 	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+#input-name-g {
+	margin-left: 50%;
+	margin-bottom: 5px;
+}
+
+#input-name-two {
+    width: 55%;
+	margin-left: 7px;
+	display: inline-block;
 }
 
 #input-guess-one {
-	width: 130%;
+	width: 40%;
 	margin-left: 10px;
+	display: inline-block;
+}
+
+#input-guess-two {
+	width: 40%;
+	margin-left: 10px;
+	display: inline-block;
 }
 
 
@@ -214,13 +258,11 @@ article {
 }
 
 .article-right {
-	/*align-items: center;*/
 	border-radius: 1px;
 	border: solid 2px darkgray;
-	display: flex;
-	flex-direction: column;
 	height: 190px;
 	width: 85%;
+	height: 200px;
 }
 
 /* Here are the settings for the card that will appear on the right side and will replicate with every score (divided into: header, article, & footer) */
@@ -253,9 +295,10 @@ article {
 	height: 110px;
 	justify-content: center;
 	margin: 0;
-	width: 88%;
+	width: 95%;
 	border-bottom: solid 2px #D0D2D3;
 	border-top: solid 2px #D0D2D3;
+	margin-left: 15px;
 }
 
 .error-border {
@@ -264,14 +307,13 @@ article {
 
 .article-right h3 {
 	color: gray;
-	font-size: 2vw;
+	font-size: 3vw;
 	margin: 0;
+	line-height: .75em;
 }
 
 .article-right article h3 {
 	font-size: 3vw;
-	margin-left: auto;
-	/*margin-right: auto;*/
 }
 
 .article-right h4 {
@@ -288,14 +330,17 @@ article {
 	height: 40px;
 	justify-content: space-between;
 	margin: 0;
-	width: 90%;
+	width: 100%;
 }
 
 .minute-count {
 	color: gray;
 	display: flex;
 	flex-direction: row;
-	margin-left: 10%;
+}
+
+.minute-count strong {
+	margin-right: .5em;
 }
 
 .guess-count {
@@ -303,12 +348,17 @@ article {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin-left: 20%;
+	margin-left: 3%;
+}
+
+.guess-count strong {
+	margin-right: .5em;
 }
 
 .x-icon {
 	border-radius: 100%;
 	height: 22px;
+	margin-right: 2%;
 }
 
 /* Latest-score card*/
@@ -356,7 +406,7 @@ article {
 
 .minUser,
 .maxUser {
-	color: #404041;
+	color: gray;
 	text-decoration: underline;
 }
 
@@ -436,7 +486,7 @@ svg {
 		width: 100%;
 	}
 	header h1 {
-		/*font-size: 7vw;*/
+		font-size: 6vw;
 	}
 	header p {
 		font-size: 2vw;
@@ -481,6 +531,18 @@ svg {
 		width: 100%;
 	}
 
+	header h1 {
+		font-size: 9vw;
+	}
+
+	header h2 {
+		font-size: 3vw;
+	}
+
+	header p {
+		font-size: 3vw;
+	}
+
 	.section-left {
 		width: 100%;
 	}
@@ -503,16 +565,16 @@ svg {
 
 	.article-right article h3 {
     font-size: 6vw;
-}
+    }
 
-	header h1 {
-		font-size: 7vw;
-		/*line-height: 48%;*/
-		/*font-size: 40pt;*/
-	}
+    #set-range {
+    height: 200px;
+    }
 
-	header p {
-		font-size: 3vw;
-	}
+	#set-range input {
+    width: 95%;
+    }
+
+
 	
 }
