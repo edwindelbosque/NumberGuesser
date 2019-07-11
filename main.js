@@ -80,7 +80,9 @@ function guessErrorAlerts() {
 		nameTwoError.classList.remove('toggle-on');
 		inputNameTwo.classList.remove('error-border');
 		nameTwoStatus = true;
-	} 	if (inputGuessOne.value == '' || inputGuessOne.value > maxRange.value || inputGuessOne.value < minRange.value) {
+	} 	if (inputGuessOne.value == '' 
+			|| parseInt(document.querySelector('#input-guess-one').value) > parseInt(document.querySelector('#max-range').value) 
+			|| parseInt(document.querySelector('#input-guess-one').value) < parseInt(document.querySelector('#min-range').value)) {
 		guessOneError.classList.add('toggle-on');
 		guessOneError.classList.remove('toggle-off');
 		inputGuessOne.classList.add('error-border');
@@ -90,7 +92,9 @@ function guessErrorAlerts() {
 		guessOneError.classList.remove('toggle-on');
 		inputGuessOne.classList.remove('error-border');
 		guessOneStatus = true;
-	}		if (inputGuessTwo.value == '' || inputGuessTwo.value > maxRange.value || inputGuessTwo.value < minRange.value) {
+	}		if (inputGuessTwo.value == '' 
+			|| parseInt(document.querySelector('#input-guess-two').value) > parseInt(document.querySelector('#max-range').value) 
+			|| parseInt(document.querySelector('#input-guess-two').value) < parseInt(document.querySelector('#min-range').value)) {
 		guessTwoError.classList.add('toggle-on');
 		guessTwoError.classList.remove('toggle-off');
 		inputGuessTwo.classList.add('error-border');
