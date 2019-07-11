@@ -1,6 +1,8 @@
 // --variables
 var minRange = document.getElementById("minRange");
 var maxRange = document.getElementById("maxRange");
+var minRangeInt = parseInt(document.getElementById("minRange").value);
+var maxRangeInt = parseInt(document.getElementById("maxRange").value);
 var rangeButton = document.querySelector('.updateRange');
 var minUser = document.querySelector('.minUser');
 var maxUser = document.querySelector('.maxUser');
@@ -17,7 +19,7 @@ var guessMessageOne = document.querySelector("#guess-message-one");
 var guessMessageTwo = document.querySelector("#guess-message-two");
 var clearButton = document.querySelector("#clear-button");
 var resetButton = document.querySelector("#reset-button");
-var randomNumber = Math.floor(Math.random() * (maxRange - minRange) + minRange);
+var	randomNumber = Math.floor(Math.random() * (parseInt(maxRange.value) - parseInt(minRange.value)) + (parseInt(minRange.value)));
 var tooLow = "that's too low";
 var tooHigh = "that's too high";
 var correctGuess = "BOOM! ";
@@ -43,10 +45,28 @@ maxRange.addEventListener("keyup", enableUpdateButton);
 minRange.addEventListener("click", enableUpdateButton);
 minRange.addEventListener("keyup", enableUpdateButton);
 resetButton.addEventListener("click", resetGame);
-submitGuessButton.addEventListener("click", submitGuesses);
-rangeButton.addEventListener("click", checkErrors);
-rangeButton.addEventListener("click", updateRangeValue);
-submitGuessButton.addEventListener("click", guessErrorAlerts)
+submitGuessButton.addEventListener("click", handleSubmitGuess);
+
+
+rangeButton.addEventListener("click", handleRange)
+
+
+function handleSubmitGuess() {
+	guessErrorAlerts();
+	if (nameOneStatus == true && nameTwoStatus == true && guessOneStatus == true && guessTwoStatus == true) {
+		submitGuesses();
+	}
+}
+
+function handleRange() {
+	
+	checkErrors(event);
+	if (verifyRange == true) {
+		updateRangeValue(event);
+	}
+
+}
+
 
 function guessErrorAlerts() {
 
@@ -54,50 +74,61 @@ function guessErrorAlerts() {
 		nameOneError.classList.add("toggle-on");
 		nameOneError.classList.remove("toggle-off");
 		inputNameOne.classList.add("error-border");
+		nameOneStatus = false;
 	} else {
 		nameOneError.classList.add("toggle-off");
 		nameOneError.classList.remove("toggle-on");
 		inputNameOne.classList.remove("error-border");
+		nameOneStatus = true;
 	} 	if (inputNameTwo.value == "") {
 		nameTwoError.classList.add("toggle-on");
 		nameTwoError.classList.remove("toggle-off");
 		inputNameTwo.classList.add("error-border");
+		nameTwoStatus = false;
 	} else {
 		nameTwoError.classList.add("toggle-off");
 		nameTwoError.classList.remove("toggle-on");
 		inputNameTwo.classList.remove("error-border");
+		nameTwoStatus = true;
 	} 	if (inputGuessOne.value == "" || inputGuessOne.value > maxRange.value || inputGuessOne.value < minRange.value) {
 		guessOneError.classList.add("toggle-on");
 		guessOneError.classList.remove("toggle-off");
 		inputGuessOne.classList.add("error-border");
+		guessOneStatus = false;
 	} else {
 		guessOneError.classList.add("toggle-off");
 		guessOneError.classList.remove("toggle-on");
 		inputGuessOne.classList.remove("error-border");
+		guessOneStatus = true;
 	}		if (inputGuessTwo.value == "" || inputGuessTwo.value > maxRange.value || inputGuessTwo.value < minRange.value) {
 		guessTwoError.classList.add("toggle-on");
 		guessTwoError.classList.remove("toggle-off");
 		inputGuessTwo.classList.add("error-border");
+		guessTwoStatus = false;
 	} else {
 		guessTwoError.classList.add("toggle-off");
 		guessTwoError.classList.remove("toggle-on");
 		inputGuessTwo.classList.remove("error-border");
-}};
+		guessTwoStatus = true;
+	}
+};
 
 function checkErrors(event) {
 
-	if (minRange.value > maxRange.value) {
+	if (parseInt(document.getElementById("minRange").value) > parseInt(document.getElementById("maxRange").value)) {
 		event.preventDefault();
 		minRange.classList.add("error-border");
 		maxRange.classList.add("error-border");
 		invalidRange.classList.add("toggle-on");
 		invalidRange.classList.remove("toggle-off");
+		verifyRange = false;
 	} else {
 		event.preventDefault();
 		minRange.classList.remove("error-border");
 		maxRange.classList.remove("error-border");
 		invalidRange.classList.add("toggle-off");
 		invalidRange.classList.remove("toggle-on");
+		verifyRange = true;
 	}
 }
 
@@ -116,8 +147,6 @@ function resetGame() {
 function clearForms() {
 	inputGuessOne.value = "";
 	inputGuessTwo.value = "";
-	inputNameOne.value = "";
-	inputNameTwo.value = "";
 }
 
 // change the set range to what the users input
