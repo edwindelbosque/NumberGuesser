@@ -50,7 +50,7 @@ h2 {
 }
 
 h5{
-	color: gray;
+	color: #404041;
 	font-size: 18px;
 	font-weight: 700;
 	height: 25px;
@@ -137,7 +137,6 @@ main {
 
 #current-range p {
 	display: inline-block;
-	margin-bottom: 15px;
 	margin-top: 10px;
 }
 
@@ -161,6 +160,7 @@ main {
 	display: flex;
 	justify-content: space-between;
 	height: 50px;
+	margin-left: 7px;
 }
 
 #current-range button {
@@ -170,7 +170,7 @@ main {
 	height: 35px;
 	width: 175px;
 	color: white;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 700;
 	border-radius: 20px;
 	margin: 5px;
@@ -212,16 +212,18 @@ input {
 
 #input-name-two {
 	width: 55%;
-	margin-left: 7px;
+	margin-left: 5px;
 	display: inline-block;
 }
 
 #input-name-p {
 	margin-left: 10px;
+	margin-bottom: 5px;
 }
 
 #input-name-g {
-	margin-left: 275px;
+	margin-left: 285px;
+	margin-bottom: 5px;
 }
 
 #input-name-two {
@@ -257,13 +259,11 @@ article {
 }
 
 .article-right {
-	/*align-items: center;*/
 	border-radius: 1px;
 	border: solid 2px darkgray;
-	display: flex;
-	flex-direction: column;
 	height: 190px;
 	width: 85%;
+	height: 200px;
 }
 
 /* Here are the settings for the card that will appear on the right side and will replicate with every score (divided into: header, article, & footer) */
@@ -296,21 +296,21 @@ article {
 	height: 110px;
 	justify-content: center;
 	margin: 0;
-	width: 88%;
+	width: 95%;
 	border-bottom: solid 2px #D0D2D3;
 	border-top: solid 2px #D0D2D3;
+	margin-left: 15px;
 }
 
 .article-right h3 {
 	color: gray;
-	font-size: 2vw;
+	font-size: 3vw;
 	margin: 0;
+	line-height: .75em;
 }
 
 .article-right article h3 {
 	font-size: 3vw;
-	margin-left: auto;
-	/*margin-right: auto;*/
 }
 
 .article-right h4 {
@@ -327,14 +327,17 @@ article {
 	height: 40px;
 	justify-content: space-between;
 	margin: 0;
-	width: 90%;
+	width: 100%;
 }
 
 .minute-count {
 	color: gray;
 	display: flex;
 	flex-direction: row;
-	margin-left: 10%;
+}
+
+.minute-count strong {
+	margin-right: .5em;
 }
 
 .guess-count {
@@ -342,12 +345,17 @@ article {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin-left: 20%;
+	margin-left: 3%;
+}
+
+.guess-count strong {
+	margin-right: .5em;
 }
 
 .x-icon {
 	border-radius: 100%;
 	height: 22px;
+	margin-right: 2%;
 }
 
 /* Latest-score card*/
@@ -428,12 +436,6 @@ article {
 	/*margin-bottom: 50px;*/
 }
 
-/*#button-section {
-	width: 50%;
-	position: absolute;
-	margin-top: 300px;
-}*/
-
 #player-name-one {
 }
 
@@ -458,7 +460,7 @@ button:disabled,
 		width: 100%;
 	}
 	header h1 {
-		/*font-size: 7vw;*/
+		font-size: 7vw;
 	}
 	header p {
 		font-size: 2vw;
