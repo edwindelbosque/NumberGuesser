@@ -1,8 +1,6 @@
 // --variables
 var minRange = document.getElementById("minRange");
 var maxRange = document.getElementById("maxRange");
-var minRangeInt = parseInt(document.getElementById("minRange").value);
-var maxRangeInt = parseInt(document.getElementById("maxRange").value);
 var rangeButton = document.querySelector('.updateRange');
 var minUser = document.querySelector('.minUser');
 var maxUser = document.querySelector('.maxUser');
@@ -46,10 +44,7 @@ minRange.addEventListener("click", enableUpdateButton);
 minRange.addEventListener("keyup", enableUpdateButton);
 resetButton.addEventListener("click", resetGame);
 submitGuessButton.addEventListener("click", handleSubmitGuess);
-
-
 rangeButton.addEventListener("click", handleRange)
-
 
 function handleSubmitGuess() {
 	guessErrorAlerts();
@@ -64,9 +59,7 @@ function handleRange() {
 	if (verifyRange == true) {
 		updateRangeValue(event);
 	}
-
-}
-
+};
 
 function guessErrorAlerts() {
 
@@ -142,6 +135,7 @@ function updateRangeValue(event) {
 function resetGame() {
 	clearForms();
 	updateRangeValue(event);
+	scoreHistory.innerHTML = "";
 }
 
 function clearForms() {
@@ -185,6 +179,8 @@ function disableButtons() {
 function winnerOne() {
 if (inputGuessOne.value == randomNumber) {	 
 	guessMessageOne.innerHTML = correctGuess
+	clearForms();
+	updateRangeValue(event);
 	scoreHistory.insertAdjacentHTML("afterbegin", `<article id="results" class="article-right">
 	  			<header>
 		  			<p><strong id="player-name-one">${inputNameOne.value}</strong></p>
@@ -207,7 +203,6 @@ if (inputGuessOne.value == randomNumber) {
 		  			<img class="x-icon" src="images/x-button.png"/>
 		  		</footer>
 	  		</article>`); 
-	resetGame();
 } 
 else if(inputGuessOne.value > randomNumber)
 {
@@ -224,6 +219,8 @@ else
 function winnerTwo() {
 if (inputGuessTwo.value == randomNumber) {	 
 	guessMessageTwo.innerHTML = correctGuess
+	clearForms();
+	updateRangeValue(event);
 	scoreHistory.insertAdjacentHTML("afterbegin", `<article id="results" class="article-right">
 	  			<header>
 		  			<p><strong id="player-name-one">${inputNameOne.value}</strong></p>
@@ -246,7 +243,6 @@ if (inputGuessTwo.value == randomNumber) {
 		  			<img class="x-icon" src="images/x-button.png"/>
 		  		</footer>
 	  		</article>`); 
-	resetGame();
 }
 else if(inputGuessTwo.value > randomNumber)
 {

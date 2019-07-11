@@ -385,7 +385,7 @@ article {
 	display: flex;
 	flex-direction: row;
 	width: 95%;
-	height: 140px;
+	height: 185px;
 }
 
 .main-score article {
@@ -446,7 +446,9 @@ article {
 }
 
 .toggle-off {
-	display: none;
+	position: absolute;
+	visibility:hidden;
+	display:none;
 }
 
 button:hover,
