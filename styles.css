@@ -259,7 +259,7 @@ article {
 }
 
 .error-border {
-	border: solid 2px red;
+	border: solid 2px #DD1972;
 }
 
 .article-right h3 {
@@ -391,7 +391,7 @@ article {
 
 .toggle-on {
 	font-size: 12px;
-	color: red;
+	color: #DD1972;
 	display: block;
 }
 

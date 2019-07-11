@@ -66,7 +66,7 @@ function guessErrorAlerts() {
 		nameTwoError.classList.add("toggle-off");
 		nameTwoError.classList.remove("toggle-on");
 		inputNameTwo.classList.remove("error-border");
-	} 	if (inputGuessOne.value > maxRange.value || inputGuessOne.value < minRange.value) {
+	} 	if (inputGuessOne.value == "" || inputGuessOne.value > maxRange.value || inputGuessOne.value < minRange.value) {
 		guessOneError.classList.add("toggle-on");
 		guessOneError.classList.remove("toggle-off");
 		inputGuessOne.classList.add("error-border");
@@ -74,7 +74,7 @@ function guessErrorAlerts() {
 		guessOneError.classList.add("toggle-off");
 		guessOneError.classList.remove("toggle-on");
 		inputGuessOne.classList.remove("error-border");
-	}		if (inputGuessTwo.value > maxRange.value || inputGuessTwo.value < minRange.value) {
+	}		if (inputGuessTwo.value == "" || inputGuessTwo.value > maxRange.value || inputGuessTwo.value < minRange.value) {
 		guessTwoError.classList.add("toggle-on");
 		guessTwoError.classList.remove("toggle-off");
 		inputGuessTwo.classList.add("error-border");
@@ -88,14 +88,14 @@ function checkErrors(event) {
 
 	if (minRange.value > maxRange.value) {
 		event.preventDefault();
-		minRange.style.borderColor = "red";
-		maxRange.style.borderColor = "red";
+		minRange.classList.add("error-border");
+		maxRange.classList.add("error-border");
 		invalidRange.classList.add("toggle-on");
 		invalidRange.classList.remove("toggle-off");
 	} else {
 		event.preventDefault();
-		minRange.style.borderColor = "lightgray";
-		maxRange.style.borderColor = "lightgray";
+		minRange.classList.remove("error-border");
+		maxRange.classList.remove("error-border");
 		invalidRange.classList.add("toggle-off");
 		invalidRange.classList.remove("toggle-on");
 	}
@@ -133,14 +133,6 @@ function submitGuesses() {
  winnerTwo();
 };
 
-// create random number from the users min and max range
-// function updateRangeValue(event){
-// event.preventDefault();
-// minUser.innerText = minRange.value;
-// maxUser.innerText = maxRange.value;
-// randomNumber = Math.floor(Math.random() * (parseInt(maxRange.value) - parseInt(minRange.value)) + (parseInt(minRange.value)));
-// }
-
 function enableUpdateButton() {
 	if(minRange.value.length === 0 && maxRange.value.length === 0 || minRange.value.length === 0 || maxRange.value.length === 0 ) {
 		rangeButton.disabled = true;
@@ -151,11 +143,9 @@ function enableUpdateButton() {
 
 function disableButtons() {
 	if(inputGuessOne.value.length === 0 && inputGuessTwo.value.length === 0 || inputGuessTwo.value.length === 0 || inputGuessOne.value.length === 0) {
-		submitGuessButton.disabled = true;
 		clearButton.disabled = true;
 		resetButton.disabled = true;
 	} else {
-		submitGuessButton.disabled = false;
 		clearButton.disabled = false;
 		resetButton.disabled = false;
 	} 
