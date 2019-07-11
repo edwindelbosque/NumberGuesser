@@ -101,7 +101,6 @@ main {
 
 /* Set-range article box */
 #set-range {
-	
 	height: 125px;
 }
 
@@ -222,7 +221,7 @@ input {
 }
 
 #input-name-g {
-	margin-left: 285px;
+	margin-left: 50%;
 	margin-bottom: 5px;
 }
 
@@ -460,7 +459,7 @@ button:disabled,
 		width: 100%;
 	}
 	header h1 {
-		font-size: 7vw;
+		font-size: 6vw;
 	}
 	header p {
 		font-size: 2vw;
@@ -505,6 +504,18 @@ button:disabled,
 		width: 100%;
 	}
 
+	header h1 {
+		font-size: 9vw;
+	}
+
+	header h2 {
+		font-size: 3vw;
+	}
+
+	header p {
+		font-size: 3vw;
+	}
+
 	.section-left {
 		width: 100%;
 	}
@@ -527,16 +538,16 @@ button:disabled,
 
 	.article-right article h3 {
     font-size: 6vw;
-}
+    }
 
-	header h1 {
-		font-size: 7vw;
-		/*line-height: 48%;*/
-		/*font-size: 40pt;*/
-	}
+    #set-range {
+    height: 200px;
+    }
 
-	header p {
-		font-size: 3vw;
-	}
+	#set-range input {
+    width: 95%;
+    }
+
+
 	
 }
