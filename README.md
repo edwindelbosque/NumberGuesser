@@ -16,7 +16,7 @@ Finally, there are also reset buttons that will wipe out the score history on th
 ![week2-numberguesser-02](https://user-images.githubusercontent.com/48811985/61046523-e577cb80-a3cc-11e9-98a4-a05826c6b4ad.jpg)
 
 ### final site
-![screencapture-file-Users-edwindelbosque-webdev-number-guesser-index-html-2019-07-11-05_16_53](https://user-images.githubusercontent.com/48811985/61046795-86ff1d00-a3cd-11e9-967b-bb8d0cf394fb.png)
+![screencapture-file-Users-edwindelbosque-webdev-number-guesser-index-html-2019-07-11-05_22_05](https://user-images.githubusercontent.com/48811985/61047112-350ac700-a3ce-11e9-9358-4896fecb39e4.png)
 
 ### Pages Site
 https://edwindelbosque.github.io/number-guesser/
