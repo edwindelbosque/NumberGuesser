@@ -19,4 +19,4 @@ Finally, there are also reset buttons that will wipe out the score history on th
 ![screencapture-edwindelbosque-github-io-number-guesser-2019-07-11-09_53_18](https://user-images.githubusercontent.com/48811985/61065904-1d463980-a3f4-11e9-86b9-584fa9b5b259.png)
 
 ### Pages Site
-https://edwindelbosque.github.io/number-guesser/
+https://edwindelbosque.github.io/NumberGuesser/
