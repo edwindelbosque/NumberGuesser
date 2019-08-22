@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+* {
+	border: 1px dotted green;
+}
+
 body {
 	background-color: #FFFFFF;
 	font-family: 'Open Sans', sans-serif;
@@ -484,6 +488,7 @@ svg {
 /*Media Query section*/
 
 @media screen and (max-width:959px) {
+	
 	header {
 		width: 100%;
 	}
